@@ -47,4 +47,5 @@ public abstract class AbstractJobServer extends LoggingObject implements JobServ
 	 * @return 結果
 	 */
 	protected abstract boolean doRun();
+
 }

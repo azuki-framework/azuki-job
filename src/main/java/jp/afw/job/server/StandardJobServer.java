@@ -33,6 +33,12 @@ import jp.afw.plugin.PluginServiceException;
 /**
  * このクラスは、標準のジョブサーバクラスです。
  * 
+ * 実行引数
+ * -baseDir ベースパス
+ * -config 設定ファイル
+ * -logClass ロガーファクトリークラス
+ * -logConfig ロガーフ設定ファイル
+ * 
  * @since 1.0.0
  * @version 1.0.0 2013/02/15
  * @author Kawakicchi
@@ -193,7 +199,7 @@ public final class StandardJobServer extends AbstractJobServer {
 			while (!isStopWorker()) {
 				checkStop();
 
-				Thread.sleep(30 * 1000);
+				Thread.sleep(10 * 1000);
 			}
 			result = true;
 		} catch (IllegalAccessException ex) {
@@ -211,7 +217,8 @@ public final class StandardJobServer extends AbstractJobServer {
 	private void checkStop() {
 		if (!stopRequest) {
 			if (StringUtility.isNotEmpty(stopFile)) {
-				File file = new File(stopFile);
+				String path = context.getAbstractPath(stopFile);
+				File file = new File(path);
 				if (file.isFile()) {
 					info("Found server stop request file.[" + stopFile + "]");
 					for (JobWorker worker : workers) {

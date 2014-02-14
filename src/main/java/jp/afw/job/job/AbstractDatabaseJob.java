@@ -86,7 +86,6 @@ public abstract class AbstractDatabaseJob extends AbstractPersistenceJob {
 	 */
 	protected final DatabaseConnection getConnection() throws SQLException {
 		if (null == myConnection) {
-			info("Create my connection.");
 			source = DatabaseConnectionManager.getSource();
 			myConnection = source.getConnection();
 			if (null != myConnection) {

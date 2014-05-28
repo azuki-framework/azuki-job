@@ -74,6 +74,20 @@ public abstract class AbstractPersistenceJob extends AbstractJob implements Cont
 	}
 
 	@Override
+	protected void doBeforeExecute() {
+		super.doBeforeExecute();
+		// TODO Write doBeforeExecute code.
+
+	}
+
+	@Override
+	protected void doAfterExecute() {
+		// TODO Write doAfterExecute code.
+
+		super.doAfterExecute();
+	}
+
+	@Override
 	public final void setContext(final Context aContext) {
 		context = aContext;
 	}
@@ -113,19 +127,5 @@ public abstract class AbstractPersistenceJob extends AbstractJob implements Cont
 	 */
 	protected final Store<String, Object> getSession() {
 		return session;
-	}
-
-	@Override
-	protected void doBeforeExecute() {
-		super.doBeforeExecute();
-		// TODO Write doBeforeExecute code.
-
-	}
-
-	@Override
-	protected void doAfterExecute() {
-		// TODO Write doAfterExecute code.
-
-		super.doAfterExecute();
 	}
 }

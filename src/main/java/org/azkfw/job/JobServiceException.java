@@ -17,7 +17,7 @@
  */
 package org.azkfw.job;
 
-import org.azkfw.core.lang.PrimitiveException;
+import org.azkfw.lang.PrimitiveException;
 
 /**
  * このクラスは、ジョブサービス層に起因する例外クラスです。

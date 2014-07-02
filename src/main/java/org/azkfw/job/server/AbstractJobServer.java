@@ -17,7 +17,7 @@
  */
 package org.azkfw.job.server;
 
-import org.azkfw.core.lang.LoggingObject;
+import org.azkfw.lang.LoggingObject;
 
 /**
  * このクラスは、ジョブサーバ機能の実装を行うための基底クラスです。

@@ -26,8 +26,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 
-import org.azkfw.core.log.LoggerFactory;
-import org.azkfw.core.util.StringUtility;
+import org.azkfw.configuration.ConfigurationFormatException;
+import org.azkfw.context.Context;
+import org.azkfw.context.ContextSupport;
 import org.azkfw.job.commandline.CommandLineArgument;
 import org.azkfw.job.commandline.CommandLineArgumentPurser;
 import org.azkfw.job.commandline.StandardCommandLineArgumentPurser;
@@ -36,9 +37,7 @@ import org.azkfw.job.job.Job;
 import org.azkfw.job.parameter.Parameter;
 import org.azkfw.job.store.JobSessionStore;
 import org.azkfw.job.worker.JobWorker;
-import org.azkfw.persistence.ConfigurationFormatException;
-import org.azkfw.persistence.context.Context;
-import org.azkfw.persistence.context.ContextSupport;
+import org.azkfw.log.LoggerFactory;
 import org.azkfw.persistence.proterty.Property;
 import org.azkfw.persistence.proterty.PropertyFile;
 import org.azkfw.persistence.proterty.PropertyManager;
@@ -46,15 +45,13 @@ import org.azkfw.persistence.proterty.PropertySupport;
 import org.azkfw.persistence.session.SessionSupport;
 import org.azkfw.plugin.PluginManager;
 import org.azkfw.plugin.PluginServiceException;
+import org.azkfw.util.StringUtility;
 
 /**
  * このクラスは、標準のジョブサーバクラスです。
  * 
- * 実行引数
- * -baseDir ベースパス
- * -config 設定ファイル
- * -logClass ロガーファクトリークラス
- * -logConfig ロガーフ設定ファイル
+ * 実行引数 -baseDir ベースパス -config 設定ファイル -logClass ロガーファクトリークラス -logConfig
+ * ロガーフ設定ファイル
  * 
  * @since 1.0.0
  * @version 1.0.0 2013/02/15

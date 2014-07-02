@@ -21,8 +21,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 
-import org.azkfw.core.util.StringUtility;
-import org.azkfw.persistence.context.AbstractContext;
+import org.azkfw.context.AbstractContext;
+import org.azkfw.util.StringUtility;
 
 /**
  * このクラスは、Job用のコンテキスト機能を実装するクラスです。

@@ -17,11 +17,11 @@
  */
 package org.azkfw.job.worker;
 
-import org.azkfw.core.lang.LoggingObject;
 import org.azkfw.job.JobServiceException;
 import org.azkfw.job.job.Job;
 import org.azkfw.job.parameter.Parameter;
 import org.azkfw.job.result.JobResult;
+import org.azkfw.lang.LoggingObject;
 
 /**
  * このクラスは、ジョブ用のワーカークラスです。

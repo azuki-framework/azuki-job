@@ -17,12 +17,12 @@
  */
 package org.azkfw.job.job;
 
+import org.azkfw.business.property.Property;
+import org.azkfw.business.property.PropertySupport;
 import org.azkfw.context.Context;
 import org.azkfw.context.ContextSupport;
-import org.azkfw.persistence.proterty.Property;
-import org.azkfw.persistence.proterty.PropertySupport;
 import org.azkfw.persistence.session.SessionSupport;
-import org.azkfw.persistence.store.Store;
+import org.azkfw.store.Store;
 
 /**
  * このクラスは、永続化層の機能を実装したジョブクラスです。

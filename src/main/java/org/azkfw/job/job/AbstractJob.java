@@ -20,7 +20,7 @@ package org.azkfw.job.job;
 import org.azkfw.job.JobServiceException;
 import org.azkfw.job.parameter.Parameter;
 import org.azkfw.job.result.JobResult;
-import org.azkfw.lang.LoggingObject;
+import org.azkfw.log.LoggingObject;
 
 /**
  * このクラスは、ジョブ機能を実装する基底クラスです。

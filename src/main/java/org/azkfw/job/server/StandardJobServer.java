@@ -181,8 +181,8 @@ public final class StandardJobServer extends AbstractJobServer {
 			if (StringUtility.isNotEmpty(plugin)) {
 				InputStream stream = context.getResourceAsStream(plugin);
 				if (null != stream) {
-					PluginManager.initialize();
-					PluginManager.load(stream, context);
+					PluginManager.getInstance().initialize();
+					PluginManager.getInstance().load(stream, context);
 				}
 			}
 

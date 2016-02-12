@@ -17,7 +17,8 @@
  */
 package org.azkfw.job.task;
 
-import org.azkfw.lang.LoggingObject;
+import org.azkfw.log.LoggingObject;
+
 
 /**
  * このクラスは、タスク機能を実装するための基底クラスです。
